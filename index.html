@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fábrica de Meme</title>
+<meta name="description" content="Clicker incremental brasileiro: avance de meme em meme, do grupo de zap da família até o algoritmo supremo.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📱</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <div class="logo" id="brandLogo">📱</div>
+      <div>
+        <h1>Fábrica de Meme</h1>
+        <p id="eraTagline">todo dia é dia de bom dia</p>
+      </div>
+    </div>
+    <div class="fame-pill"><span class="dot"></span><span id="fameLabel" class="mono">0 Fama · x1.00</span></div>
+  </header>
+
+  <nav class="era-track" id="eraTrack" aria-label="Progresso das eras"></nav>
+
+  <div class="era-progress" id="eraProgressWrap">
+    <div class="era-progress-bar"><div class="era-progress-fill" id="eraProgressFill"></div></div>
+    <span class="era-progress-label" id="eraProgressLabel"></span>
+  </div>
+
+  <div class="statbar">
+    <div class="stat">
+      <span class="label">Curtidas</span>
+      <span class="value accent mono" id="statCurtidas">0</span>
+    </div>
+    <div class="stat">
+      <span class="label">Por segundo</span>
+      <span class="value mono" id="statCps">0</span>
+    </div>
+    <div class="stat">
+      <span class="label">Por clique</span>
+      <span class="value mono" id="statClick">1</span>
+    </div>
+  </div>
+
+  <main>
+    <div class="click-panel">
+      <div class="click-era-name" id="clickEraName">Grupo de Zap da Família</div>
+      <button class="click-btn" id="clickBtn" type="button" aria-label="Postar meme">
+        <span class="click-emoji" id="clickEmoji">👨‍👩‍👧‍👦</span>
+        <span>Postar Meme</span>
+      </button>
+      <div class="click-power">gera <b id="clickPowerLabel" class="mono">1</b> curtida por clique</div>
+
+      <div class="upgrades">
+        <h3>Upgrades de clique</h3>
+        <div id="upgradeList"></div>
+      </div>
+
+      <div class="prestige-box">
+        <h3>🔥 Viralizar</h3>
+        <p id="prestigeDesc">Zere seu progresso e ganhe Fama permanente, que multiplica tudo pra sempre.</p>
+        <button class="prestige-btn" id="prestigeBtn" type="button">Viralizar agora</button>
+      </div>
+    </div>
+
+    <div class="shop" id="shop">
+      <div class="shop-head">
+        <h2>Linha de produção</h2>
+        <span>compre pra gerar curtidas sozinho</span>
+      </div>
+      <div id="eraSections"></div>
+    </div>
+  </main>
+
+  <footer>
+    progresso salvo automaticamente neste navegador · <button id="resetBtn" type="button">reiniciar tudo</button>
+  </footer>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
